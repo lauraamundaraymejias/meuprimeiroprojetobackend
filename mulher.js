@@ -13,7 +13,7 @@ function mostraMulher(require, response) {
 }
 
 function mostraPorta() {
-    console.log("Servidor criado e rodando na porta ", porta)
+    console.log("Servidor criado e rodando na porta", porta)
 }
 
 app.use(router.get('/mulher', mostraMulher))
