@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import('dotenv').config()
+await (await import('dotenv')).config();
 
 async function conectaBancoDeDados() {
     try {

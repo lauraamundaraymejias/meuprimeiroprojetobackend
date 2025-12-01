@@ -1,13 +1,13 @@
 import express, { response } from 'express'; // aqui estou iniciando o express
 import conectarBancoDeDados from './bancoDeDados.js';
 const router = express.Router() // aqui estou configurando a primeira parte da rota
-const cors = import('cors') //aqui estou trazendo o pacote cors que permite instalar consumir essa API no front-end
+const cors = (await import('cors')).default //aqui estou trazendo o pacote cors que permite instalar consumir essa API no front-end
 import('./bancoDeDados.js') //aqui eu estou ligando ao arquivo banco de dados
 conectarBancoDeDados() //eu estou chamando a funcao que conecta o banco de dados
 
 const Mulher = (await import ('./mulherModel.js')).default
 
-const app = express () // aqui estou iniciando o app
+const app = express() // aqui estou iniciando o app
 app.use(express.json());
 app.use(cors())
 
